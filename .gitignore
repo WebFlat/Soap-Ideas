@@ -1,0 +1,10 @@
+.idea/
+node_modules
+.sublime-gulp.cache
+partials
+src
+gulpfile.js
+package.json
+*.exe
+*.cfg
+*.psd
