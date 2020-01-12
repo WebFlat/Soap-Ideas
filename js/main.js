@@ -10631,5 +10631,82 @@ $(document).ready(function(){
 		smartSpeed: 800
 	});
 
+	//Animate
+	// function is_fully_shown(target) {
+	// var wt = $(window).scrollTop(); 
+	// var wh = $(window).height();    
+	// var eh = $(target).height();  
+	// var et = $(target).offset().top;
+ 
+	// 	if (et >= wt && et + eh <= wh + wt){
+	// 		return true;
+	// 	} else {
+	// 		return false;    
+	// 	}
+	// }
+ 
+	// if (is_fully_shown('.slide__title')) {
+	// 	console.log(true);
+	// 	$('.slide__title').addClass('fadeInLeft').addClass('animated');
+	// }
 
+	// else if (is_fully_shown('.offer__item--1')) {
+	// 	console.log(true);
+	// 	$('.offer__item--1, .offer__item--2').addClass('fadeInUp').addClass('animated').addClass('slower');
+	// }
+
+
+	jQuery.fn.extend({
+  onAppearanceAddClass: function(class_to_add) {
+    var $window = $( window ),
+        window_height = $window.height(),
+        array_of_$elements = [];
+    this.each(function(i,el) {
+      array_of_$elements.push($( el ));
+    })
+    scrollHandler();
+		if (array_of_$elements.length) {
+      $window.on('resize', resizeHandler).on('resize', scrollHandler).on('scroll', scrollHandler);
+    }
+    function resizeHandler() {
+      window_height = $window.height();
+    }
+    function watchProcessedElements(array_of_indexes) {
+    	var l, i;
+      for (l = array_of_indexes.length, i = l - 1; i > -1; --i) {
+        array_of_$elements.splice(array_of_indexes[i], 1);
+      }
+      if (!array_of_$elements.length) {
+        $window.off('resize', resizeHandler).off('scroll', scrollHandler).off('resize', scrollHandler);
+      }
+    }
+    function scrollHandler() {
+      var i, l, processed = [];
+      for ( l = array_of_$elements.length, i = 0; i < l; ++i ) {
+        if ($window.scrollTop() + window_height > array_of_$elements[i].offset().top) {
+          array_of_$elements[i].addClass(class_to_add);
+          processed.push(i); 
+        }
+      }
+      if (processed.length) {
+        watchProcessedElements(processed);
+      }
+    }
+    return this;
+  }
+})
+
+
+$('.popular__item--2,.popular__item--3,.popular__item--4,.popular__item--5, .offer__item--2, .offer__item--5, .about-card__item--3, .about__item--2, .footer__gallery').onAppearanceAddClass('animated').onAppearanceAddClass('slow').onAppearanceAddClass('fadeInRight');
+
+
+$('.offer__item--4, .offer__item--7').onAppearanceAddClass('fadeInUp').onAppearanceAddClass('animated').onAppearanceAddClass('slow');
+
+$('.offer__item--3, .offer__item--6, .offer__item--1, .about-card__item--1, .popular__item--1, .about__item--1, .slide__title, .footer__info').onAppearanceAddClass('fadeInLeft').onAppearanceAddClass('animated').onAppearanceAddClass('slow');
+		
+		
+
+		
+
+	
 });
