@@ -10607,7 +10607,7 @@ $(document).ready(function(){
 	'use strict';
 
 
-	$('.owl-carousel').owlCarousel({
+	$('.slides').owlCarousel({
 		loop: true,
 		items: 1,
 		autoplay: true,
@@ -10625,7 +10625,6 @@ $(document).ready(function(){
 		dots: true,
 		nav: true,
 		autoplayHoverPause: true,
-		animateOut: 'fadeOut',
 		smartSpeed: 800
 	});
 
@@ -10695,10 +10694,10 @@ $(document).ready(function(){
 })
 
 
-$('.popular__item--2,.popular__item--3,.popular__item--4,.popular__item--5, .offer__item--2, .offer__item--5, .about-card__item--3, .about__item--2, .footer__gallery').onAppearanceAddClass('animated').onAppearanceAddClass('fast').onAppearanceAddClass('fadeInRight');
+$('.popular__item--2,.popular__item--3,.popular__item--5, .offer__item--2, .offer__item--5, .about-card__item--3, .about__item--2, .footer__gallery').onAppearanceAddClass('animated').onAppearanceAddClass('fast').onAppearanceAddClass('fadeInRight');
 
 
-$('.offer__item--4').onAppearanceAddClass('fadeInUp').onAppearanceAddClass('animated').onAppearanceAddClass('slow');
+$('.offer__item--4').onAppearanceAddClass('fadeInUp').onAppearanceAddClass('animated').onAppearanceAddClass('fast');
 
 $('.offer__item--3, .offer__item--6, .offer__item--1, .about-card__item--1, .popular__item--1, .about__item--1, .slide__title, .footer__info').onAppearanceAddClass('fadeInLeft').onAppearanceAddClass('animated').onAppearanceAddClass('fast');
 		
