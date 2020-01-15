@@ -10606,7 +10606,7 @@ animateIn:!1},e.prototype.swap=function(){if(1===this.core.settings.items&&a.sup
 $(document).ready(function(){
 	'use strict';
 
-
+//Slider******************************************************************
 	$('.slides').owlCarousel({
 		loop: true,
 		items: 1,
@@ -10628,38 +10628,16 @@ $(document).ready(function(){
 		smartSpeed: 800
 	});
 
-	//Animate
-	// function is_fully_shown(target) {
-	// var wt = $(window).scrollTop(); 
-	// var wh = $(window).height();    
-	// var eh = $(target).height();  
-	// var et = $(target).offset().top;
- 
-	// 	if (et >= wt && et + eh <= wh + wt){
-	// 		return true;
-	// 	} else {
-	// 		return false;    
-	// 	}
-	// }
- 
-	// if (is_fully_shown('.slide__title')) {
-	// 	console.log(true);
-	// 	$('.slide__title').addClass('fadeInLeft').addClass('animated');
-	// }
-
-	// else if (is_fully_shown('.offer__item--1')) {
-	// 	console.log(true);
-	// 	$('.offer__item--1, .offer__item--2').addClass('fadeInUp').addClass('animated').addClass('slower');
-	// }
 
 
+//Animation*****************************************************************
 	jQuery.fn.extend({
-  onAppearanceAddClass: function(class_to_add) {
-    var $window = $( window ),
-        window_height = $window.height(),
-        array_of_$elements = [];
-    this.each(function(i,el) {
-      array_of_$elements.push($( el ));
+		onAppearanceAddClass: function(class_to_add) {
+		var $window = $( window ),
+			window_height = $window.height(),
+			array_of_$elements = [];
+		this.each(function(i,el) {
+		array_of_$elements.push($( el ));
     })
     scrollHandler();
 		if (array_of_$elements.length) {
@@ -10689,17 +10667,35 @@ $(document).ready(function(){
         watchProcessedElements(processed);
       }
     }
-    return this;
-  }
-})
+    	return this;
+ 	 }
+	});
 
+$('.popular__item--2,.popular__item--3, .offer__item--5, .about-card__item--3, .about__item--2, .footer__gallery').onAppearanceAddClass('animated fadeInRight fast');
 
-$('.popular__item--2,.popular__item--3,.popular__item--5, .offer__item--2, .offer__item--5, .about-card__item--3, .about__item--2, .footer__gallery').onAppearanceAddClass('animated').onAppearanceAddClass('fast').onAppearanceAddClass('fadeInRight');
+$('.offer__item--4, .offer__item--6, .offer__item--7, .popular__item--5, .popular__item--4, .reviews__title-wrap, .popular__title-wrap .offer__item--1, .offer__item--2').onAppearanceAddClass('fadeInUp animated slow');
 
+$('.offer__item--3, .about-card__item--1, .popular__item--1, .about__item--1,  .footer__info').onAppearanceAddClass('animated fadeInLeft fast');
 
-$('.offer__item--4').onAppearanceAddClass('fadeInUp').onAppearanceAddClass('animated').onAppearanceAddClass('fast');
+var myArray = $('.slide__title');
 
-$('.offer__item--3, .offer__item--6, .offer__item--1, .about-card__item--1, .popular__item--1, .about__item--1, .slide__title, .footer__info').onAppearanceAddClass('fadeInLeft').onAppearanceAddClass('animated').onAppearanceAddClass('fast');
+for (var i = 0; i < myArray.length; i++) {
+	$(myArray[i]).addClass('fadeInLeft infinite slower');
+	
+	
+};
+var myArray2 = $('.slide');
+function addAnimated() {
+	for (var j = 0; j < myArray2.length; j++) {
+		console.log(myArray2.length);
+		if ($('.owl-item').hasClass('active')) {
+			$('.slide__title').addClass('animated');
+			console.log(myArray2[j]);
+			}
+		};
+	};
+addAnimated();
+
 		
 		
 
