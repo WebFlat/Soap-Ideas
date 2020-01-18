@@ -4,6 +4,7 @@
 // @import url('https://fonts.googleapis.com/css?family=Ma+Shan+Zheng|Raleway:700,900&display=swap');
 @import './owl/_theme.default';
 @import './owl/owl.carousel';
+@import 'animate';
 
 
 @mixin tr($time) {
@@ -37,6 +38,7 @@ $lite-color: #fff;
 html {
 	font-size: 10px;
 	height: 100%;
+	scroll-behavior: smooth;
 }
 // font-family: 'Ma Shan Zheng', cursive;
 body {
@@ -46,7 +48,7 @@ body {
 	line-height: 1.6;
 	color: $current-color;
 	min-height: 100%;
-	position: relative;
+	position: relative;	
 }
 
 
@@ -108,6 +110,7 @@ body {
 		height: 50px;
 		width: 80%;
 		margin: 0 auto;
+		@include tr(.5s);
 	}
 	&__links {
 		display: flex;
@@ -124,7 +127,7 @@ body {
 			height: 100%;
 			width: 100%;
 			padding: 0 10px;
-			@include tr(.3s);
+			@include tr(.2s);
 			cursor: pointer;
 			&:hover .header__link,
 			&:focus .header__link {
@@ -147,8 +150,90 @@ body {
 		text-decoration: none;
 		font-weight: bold;
 		@include tr(.2s);
+		background: transparent;
 	}
 
+}
+.btn-top {
+	position: fixed;
+	height: 50px;
+	width: 50px;
+	z-index: 20;
+	bottom: 50px;
+	right: 15px;
+	overflow: hidden;
+	cursor: pointer;
+	border-radius: 2px;
+	@include tr(.3s);
+	&__wrap {
+		background: #976f55;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		transform: translateY(100%);
+		@include tr(.4s);
+		&:hover,
+		&:active,
+		&:focus {
+			background: #111;
+		}
+	}
+	&__link {
+		text-decoration: none;
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: relative;
+		z-index: 30;
+	}
+	&__icon {
+		fill: #fff;
+		@include myPos();
+		height: 20px;
+		width: 20px;
+	}
+}
+
+.burger {
+    position: absolute;
+	top: 17px;
+	left: 20px;
+    z-index: 5;
+    display: none;
+    margin-right: 25px;
+    cursor: pointer;
+	&__line {
+		position: relative;
+		transition: all .2s ease-in;
+		width: 30px;
+		height: 3px;
+		background-color: #fff;
+		@include tr(.2s);
+		&:not(:first-of-type) {
+    		margin-top: 7px;
+		}
+		&.rotate {
+			&:first-of-type {
+				transform: rotate(-45deg);
+				top: 10px;
+			}
+			&:last-of-type {
+				transform: rotate(45deg);
+			}
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+	}
+	&:hover .burger__line,
+	&:focus .burger__line,
+	&:active .burger__line {
+		background-color: $hover-color;
+	}
+}
+.show {
+	display: block !important;
+	transform: translateX(0) !important;
 }
 
 
@@ -157,7 +242,7 @@ body {
 	position: relative;
 }
 .slides {
-	overflow: hidden;
+	// overflow: hidden;
 	position: relative;
 }
 .slide {
@@ -181,7 +266,7 @@ body {
 		position: absolute;
 		bottom: 10%;
 		left: 10%;
-		width: 400px;
+		width: 460px;
 		color: $lite-color;
 	}
 	&__title {
@@ -323,9 +408,7 @@ body {
 	}
 
 }
-.slides .owl-dots {
-	display: none !important;
-}
+
 
 
 //Block about,popular****************************************************
@@ -335,6 +418,7 @@ body {
 .reviews {
 	padding: 60px 0 50px 0;
 	text-align: center;
+	overflow: hidden;
 	&__title {
 		font-size: 1.8rem;
 		overflow: hidden;
@@ -365,7 +449,7 @@ body {
 	&__items {
 		margin-top: 30px;
 		width: 100%;
-		height: 1350px;
+		// height: 1350px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(3, 1fr);
@@ -462,7 +546,7 @@ body {
 		}
 	}
 	&__description {
-		font-size: 2.2rem;
+		font-size: 2rem;
 		letter-spacing: -1px;
 		text-transform: uppercase;
 		font-weight: 900;
@@ -560,6 +644,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	padding: 50px 0;
+	overflow: hidden;
 	&__item {
 		width: 30%;
 		max-width: 30%;
@@ -579,8 +664,8 @@ body {
 		&:before {
 			content: "";
 			display: block;
-			width: 60px;
-			height: 60px;
+			width: 0;
+			height: 0;
 			@include myPos();
 			background: $hover-color;
 			@include tr(.3s);
@@ -850,6 +935,12 @@ body {
 		color: $current-color;
 		font-weight: 700;
 		font-size: 2.4rem;
+		@include tr(.2s);
+		&:hover,
+		&:focus,
+		&:active {
+			color: $hover-color;
+		}
 	}
 	&__position {
 		font-size: 1.4rem;
@@ -861,24 +952,32 @@ body {
 .reviews__cards button.owl-prev {
 	display: none !important;
 }
+.slides button.owl-dot span,
 .reviews__cards button.owl-dot {
-	width: 12px;
-	height: 12px;
-	background: rgb(155, 155, 155);
-	margin: 5px;
+	width: 12px !important;
+	height: 12px !important;
+	background: rgb(155, 155, 155) !important;
+	margin: 5px !important;
+	border-radius: 0 !important;
 	@include tr(.2s);
 	&:hover {
-		background: rgb(151, 111, 85);
+		background: rgb(151, 111, 85) !important;
 	}
 }
+.slides button.owl-dot.active span,
 .reviews__cards button.owl-dot.active {
-	background: rgb(151, 111, 85);
+	background: rgb(151, 111, 85) !important;
 }
+.slides .owl-dots,
 .reviews__cards .owl-dots {
 	position: absolute;
 	left: 50%;
 	bottom: -60px;
 	transform: translateX(-50%);
+	z-index: 40;
+}
+.slides .owl-dots {
+	bottom: -40px;
 }
 
 
@@ -886,6 +985,7 @@ body {
 //Footer*******************************************************
 .footer {
 	background: rgb(39, 39, 39);
+	overflow: hidden;
 	&__top {
 		display: flex;
 		padding: 65px 0;
@@ -1095,11 +1195,11 @@ body {
 		display: flex;
 		justify-content: space-between;
 		padding: 30px;
-		color: rgba(255, 255, 255, 0.3);
+		color: rgba(255, 255, 255, 0.5);
 		font-size: 1.2rem;
 	}
 	&__link {
-		color: rgba(255, 255, 255, 0.3);
+		color: rgba(255, 255, 255, 0.5);
 		text-decoration: none;
 		@include tr(.2s);
 		&:hover,
@@ -1109,3 +1209,8 @@ body {
 		}
 	}
 }
+
+
+
+
+@import 'media';
