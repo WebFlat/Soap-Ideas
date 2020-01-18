@@ -10611,11 +10611,20 @@ $(document).ready(function(){
 		loop: true,
 		items: 1,
 		autoplay: true,
-		nav: true,
-		dots: true,
 		autoplayHoverPause: true,
 		animateOut: 'fadeOut',
-		smartSpeed: 1000
+		smartSpeed: 1000,
+		responsiveClass: true,
+		responsive : {
+    		0 : {
+				nav: false,
+				dots: true,
+    		},
+			690 : {
+				nav: true,
+				dots: false,
+			}
+		}
 	});
 
 	$('.reviews__cards').owlCarousel({
@@ -10696,10 +10705,22 @@ function addAnimated() {
 	};
 addAnimated();
 
-		
-		
 
-		
 
-	
+//Отслеживание перемещения********************************************
+    var g_top = 0;
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 1000) {
+			$('.btn-top__wrap').css('transform', 'translateY(0)');
+		} else if ($(this).scrollTop() < 1000) {
+				$('.btn-top__wrap').css('transform', 'translateY(100%)');	
+		}
+	});
+
+
+	$('#burger').click(function(e) {
+		e.preventDefault();
+		$('.burger__line').toggleClass('rotate');
+		$('.header__nav').toggleClass('show');
+	});	
 });
