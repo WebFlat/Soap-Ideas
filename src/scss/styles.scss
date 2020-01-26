@@ -5,18 +5,10 @@
 @import './owl/_theme.default';
 @import './owl/owl.carousel';
 @import 'animate';
+@import 'gallery';
 
 
-@mixin tr($time) {
-	transition: all ($time) ease-in;
-}
 
-@mixin myPos($top: 50%, $left: 50%, $tx: -50%, $ty: -50%) {
-	position: absolute;
-	top: $top;
-	left: $left;
-	transform: translate($tx, $ty);
-}
 h1,h2,h3,h4,h5,h6,p {
 	margin: 0;
 	padding: 0;
@@ -24,10 +16,6 @@ h1,h2,h3,h4,h5,h6,p {
 li {
 	list-style: none;
 }
-
-$current-color: #151515;
-$hover-color:#EFC4A3;
-$lite-color: #fff;
 
 
 
@@ -65,7 +53,7 @@ body {
 	width: 80%;
 	max-width: 1200px;
 	top: 40px;
-	background-color: rgba(255, 255, 255,.2);
+	background-color: rgba(255, 255, 255,.3);
 	z-index: 10;
 	border-radius: 2px;
 	color: $lite-color;
@@ -126,7 +114,6 @@ body {
 			justify-content: center;
 			height: 100%;
 			width: 100%;
-			padding: 0 10px;
 			@include tr(.2s);
 			cursor: pointer;
 			&:hover .header__link,
@@ -151,8 +138,16 @@ body {
 		font-weight: bold;
 		@include tr(.2s);
 		background: transparent;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		justify-content: center;
+		align-items: center;	
 	}
 
+}
+.current-tab {
+	background-color: $hover-color;
 }
 .btn-top {
 	position: fixed;
@@ -643,7 +638,7 @@ body {
 .about-card {
 	display: flex;
 	justify-content: space-between;
-	padding: 50px 0;
+	padding: 50px 15px;
 	overflow: hidden;
 	&__item {
 		width: 30%;
@@ -678,7 +673,7 @@ body {
 		&:hover,
 		&:focus {
 			background: transparent;
-			box-shadow: 0px 0px 21px 9px rgba(0,0,0,0.75);
+			box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
 		}
 	}
 	&__title {

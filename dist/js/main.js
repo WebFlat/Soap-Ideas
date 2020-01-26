@@ -10722,5 +10722,19 @@ addAnimated();
 		e.preventDefault();
 		$('.burger__line').toggleClass('rotate');
 		$('.header__nav').toggleClass('show');
-	});	
+	});
+
+
+//Активные вкладки меню**********************************************
+	try{
+		var el=document.getElementsByClassName('header__link');
+		var url=document.location.href;//палим текущий урл
+			for(var i=0;i<el.length; i++){
+				if (url==el[i].href){
+					el[i].className += ' current-tab';
+				};
+			};
+	}
+	catch(e){}
+
 });

@@ -1,5 +1,5 @@
-@mixin tr($property, $time: .5s) {
-	transition: $property $time linear;
+@mixin tr($time) {
+	transition: all ($time) ease-in;
 }
 
 @mixin myPos($top: 50%, $left: 50%, $tx: -50%, $ty: -50%) {
@@ -8,3 +8,8 @@
 	left: $left;
 	transform: translate($tx, $ty);
 }
+
+
+$current-color: #151515;
+$hover-color:#EFC4A3;
+$lite-color: #fff;
