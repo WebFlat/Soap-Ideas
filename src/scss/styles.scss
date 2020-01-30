@@ -6,6 +6,8 @@
 @import './owl/owl.carousel';
 @import 'animate';
 @import 'gallery';
+@import 'contact';
+// @import 'baguetteBox';
 
 
 
@@ -53,7 +55,7 @@ body {
 	width: 80%;
 	max-width: 1200px;
 	top: 40px;
-	background-color: rgba(255, 255, 255,.3);
+	background-color: rgba(39, 39, 39, .7);
 	z-index: 10;
 	border-radius: 2px;
 	color: $lite-color;
@@ -62,7 +64,7 @@ body {
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 50px;
-		border-bottom: 1px solid rgba(239,196,163,.6);
+		border-bottom: 2px solid rgba(239,196,163,.9);
 	}
 	&__title {
 		@include tr(.2s);
@@ -96,7 +98,7 @@ body {
 	}
 	&__nav {
 		height: 50px;
-		width: 80%;
+		width: 90%;
 		margin: 0 auto;
 		@include tr(.5s);
 	}

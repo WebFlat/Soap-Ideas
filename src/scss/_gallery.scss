@@ -112,3 +112,71 @@
 	}
 }
 
+
+.gallery-grid {
+	padding: 50px 0;
+}
+
+.cards {
+	display: grid;
+	width: 100%;
+	margin: 0 auto;
+  	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  	grid-gap: 30px;
+}
+.card {
+	&__item {
+		text-decoration: none;
+		color: $current-color;
+		&:hover .card__img-wrap::before ,
+		&:focus .card__img-wrap::before {
+			height: 100%;
+			width: 100%;
+		}
+		&:hover .card__img,
+		&:focus .card__img {
+			transform: translate(-50%, -50%) scale(1.1);
+		}	
+	}
+	&__img-wrap {
+		width: 100%;
+		height: 303px;
+		overflow: hidden;
+		position: relative;
+	    background: #f4f4f4;
+		border: 20px solid #f4f4f4;
+		&::before {
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			background: rgba(17,17,17,.39);
+			@include tr(.3s);
+			@include myPos();
+			z-index: 5;
+		}
+	}
+	&__img {
+		@include myPos();
+		object-fit: cover;
+		max-width: 100%;
+		@include tr(.3s);
+	}
+	&__title {
+		font-size: 1.7rem;
+		text-transform: uppercase;
+		margin-top: 15px;
+		font-weight: 900;
+		letter-spacing: -1px;
+	}
+	&__prise-value,
+	&__currency {
+		color: #976f55;
+		font-weight: bold;
+	}
+
+}
+.hide {
+	display: none;
+}
+

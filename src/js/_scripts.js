@@ -77,16 +77,14 @@ $(document).ready(function(){
 
 $('.popular__item--2,.popular__item--3, .offer__item--5, .about-card__item--3, .about__item--2, .footer__gallery').onAppearanceAddClass('animated fadeInRight fast');
 
-$('.offer__item--4, .offer__item--6, .offer__item--7, .popular__item--5, .popular__item--4, .reviews__title-wrap, .popular__title-wrap .offer__item--1, .offer__item--2').onAppearanceAddClass('fadeInUp animated slow');
+$('.offer__item--4, .offer__item--6, .offer__item--7, .popular__item--5, .popular__item--4, .reviews__title-wrap, .popular__title-wrap .offer__item--1, .offer__item--2, .footer__mail').onAppearanceAddClass('fadeInUp animated slow');
 
 $('.offer__item--3, .about-card__item--1, .popular__item--1, .about__item--1,  .footer__info').onAppearanceAddClass('animated fadeInLeft fast');
 
-var myArray = $('.slide__title');
 
+var myArray = $('.slide__title');
 for (var i = 0; i < myArray.length; i++) {
 	$(myArray[i]).addClass('fadeInLeft infinite slower');
-	
-	
 };
 var myArray2 = $('.slide');
 function addAnimated() {
@@ -130,6 +128,17 @@ addAnimated();
 				};
 			};
 	}
-	catch(e){}
+	catch(e){};
+
+
+
+
+//Галерея***************************************************************
+	// baguetteBox.run('.cards');
 
 });
+
+
+
+
+
