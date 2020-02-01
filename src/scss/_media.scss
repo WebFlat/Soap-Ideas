@@ -117,6 +117,16 @@
 	.slide__content {
     	left: 13%;
 	}
+	.form-feedback__main-wrap {
+		flex-direction: column;
+	}
+	.form-feedback__input {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.contacts {
+		padding: 100px 0 50px 0;
+	}
 }
 
 
@@ -214,6 +224,10 @@
 	.offer {
 		padding: 0 0 25px 0;
 		margin-top: 60px;
+	}
+	.header__cart-wrap {
+		position: relative;
+		top: 5px;
 	}
 }
 
@@ -330,6 +344,23 @@
 	.slide__link {
 		padding: 15px 30px;
 		font-size: 1.6rem;
+	}
+	.form-feedback__label {
+		flex-direction: column;
+	}
+	.form-feedback__title::before {
+		left: 0;
+		bottom: -10px;
+		height: 2px;
+		width: 200px;
+	}
+	.form-feedback__title {
+		margin: 0;
+	}
+	.form-feedback__subtitle {
+		margin-top: 20px;
+		width: 100%;
+		text-align: center;
 	} 
 }
 
@@ -345,10 +376,14 @@
 	}
 	.header__logo {
     	margin-left: 10px;
+		font-size: 1.6rem;
 	}
 	.header__top {
     	padding: 0 15px 0 50px;
 	}
+	.burger {
+		top: 22px;
+	}	
 	.offer__description {
 		font-size: 1.6rem;
 	}
@@ -367,5 +402,11 @@
 	}
 	.about-card {
 		padding: 0 0 50px 0;
+	}
+	.data-mail__link {
+		font-size: 1.6rem;
+	}
+	.footer__top {
+		padding: 30px 0 15px 0;
 	}
 }
