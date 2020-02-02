@@ -413,8 +413,8 @@
 							<div class="footer__mail">
 								<h6 class="footer__mail-title">Новостная рассылка</h6>
 								<p class="footer__mail-subtitle">Присоединяйтесь к нашему списку адресов электронной почты для получения советов и полезной информации.</p>
-								<form action="POST" class="footer__form">
-									<input class="footer__email" type="email" required placeholder="Введите вашу почту">
+								<form action="./php/form.php" method="POST" class="footer__form">
+									<input class="footer__email" name="email" type="email" required placeholder="Введите вашу почту">
 									<input class="footer__submit" type="submit" value="Подписаться">
 								</form>
 								<div class="footer__soc-wrap">
