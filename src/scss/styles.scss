@@ -34,7 +34,7 @@ html {
 // font-family: 'Ma Shan Zheng', cursive;
 body {
 	// font-family: 'Raleway', sans-serif;
-	font-family: 'Comfortaa', cursive;
+	font-family: 'Comfortaa', cursive, serif;
 	font-size: 1.8rem;
 	line-height: 1.6;
 	color: $current-color;
@@ -854,7 +854,7 @@ body {
 	&__card-wrap {
 		display: flex;
 		justify-content: center;
-		margin-top: 45px;
+		margin: 45px 5px 0 5px;
 		box-shadow: 2px 3px 6px 0 rgba(0,0,0,.17);
 		position: relative;
 		background: $lite-color;
