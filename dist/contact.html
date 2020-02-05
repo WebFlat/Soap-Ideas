@@ -217,14 +217,14 @@
 							<span class="form-feedback__title">СВЯЗАТЬСЯ</span>
 							<span class="form-feedback__subtitle">если у вас есть какие-либо вопросы, просто заполните контактную форму, и мы ответим вам в ближайшее время.</span>
 						</label>
-						<form action="POST" id="form-feedback" class="form-feedback__main">
+						<form action="sendMessage.php" method="POST" id="form-feedback" class="form-feedback__main">
 							<div class="form-feedback__main-wrap">
-								<input type="text" class="form-feedback__input" placeholder="Ваше Имя" required>
-								<input type="text" class="form-feedback__input" placeholder="Почта" required>
-								<input type="text" class="form-feedback__input" placeholder="Телефон" required>
+								<input type="text" name="name" class="form-feedback__input" placeholder="Ваше Имя" required>
+								<input type="email" name="email" class="form-feedback__input" placeholder="Почта" required>
+								<input type="text" pattern="[\+]\d{12}" name="phone" class="form-feedback__input" placeholder="Телефон (+38....)" required>
 							</div>
 							<textarea name="message" class="form-feedback__input form-feedback__input--text" cols="30" rows="10" placeholder="Сообщение" required></textarea>
-							<input type="submit" class="form-feedback__btn" value="Отправить сообщение">
+							<input type="submit" name="submit" class="form-feedback__btn" value="Отправить сообщение">
 						</form>
 					</div>
 				</article>
@@ -292,7 +292,7 @@
 								<h6 class="footer__mail-title">Новостная рассылка</h6>
 								<p class="footer__mail-subtitle">Присоединяйтесь к нашему списку адресов электронной почты для получения советов и полезной информации.</p>
 								<form action="form.php" method="POST" class="footer__form">
-									<input class="footer__email" name="email" type="email" required placeholder="Введите вашу почту">
+									<input class="footer__email" name="email" type="text" required placeholder="Введите вашу почту">
 									<input class="footer__submit" type="submit" name="submit" value="Подписаться">
 								</form>
 								<div class="footer__soc-wrap">

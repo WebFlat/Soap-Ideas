@@ -229,6 +229,15 @@
 		position: relative;
 		top: 5px;
 	}
+	.descriptionProduct__title {
+		font-size: 3.5rem;
+	}
+	.descriptionProduct__text {
+		font-size: 1.4rem;
+	}
+	.slide-gallery__title {
+		font-size: 6rem;
+	}
 }
 
 
@@ -361,6 +370,9 @@
 		margin-top: 20px;
 		width: 100%;
 		text-align: center;
+	}
+	.descriptionProduct__title {
+		font-size: 3rem;
 	} 
 }
 
@@ -408,5 +420,11 @@
 	}
 	.footer__top {
 		padding: 30px 0 15px 0;
+	}
+	.slide-gallery__title {
+		font-size: 5rem;
+	}
+	.descriptionProduct__title {
+		font-size: 2rem;
 	}
 }
