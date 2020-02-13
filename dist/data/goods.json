@@ -1,0 +1,62 @@
+{
+    "4.1" : {
+        "name": "Мыло клубничка",
+        "price": "50",
+        "img": "../img/gallery/item1.jpeg"
+    },
+    "4.2" : {
+        "name": "Мыло Торт",
+        "price": "60",
+        "img": "../img/gallery/item2.jpeg"
+    },
+    "4.3" : {
+        "name": "Мыло Сердце",
+        "price": "40",
+        "img": "../img/gallery/item3.jpeg"
+    },
+    "4.4" : {
+        "name": "Мыло клубничка",
+        "price": "50",
+        "img": "../img/gallery/item1.jpeg"
+    },
+    "4.5" : {
+        "name": "Мыло Торт",
+        "price": "60",
+        "img": "../img/gallery/item2.jpeg"
+    },
+    "4.6" : {
+        "name": "Мыло Сердце",
+        "price": "40",
+        "img": "../img/gallery/item3.jpeg"
+    },
+	"4.7" : {
+        "name": "Мыло клубничка",
+        "price": "50",
+        "img": "../img/gallery/item1.jpeg"
+    },
+    "4.8" : {
+        "name": "Мыло Торт",
+        "price": "60",
+        "img": "../img/gallery/item2.jpeg"
+    },
+    "4.9" : {
+        "name": "Мыло Сердце",
+        "price": "40",
+        "img": "../img/gallery/item3.jpeg"
+    },
+    "4.10" : {
+        "name": "Мыло клубничка",
+        "price": "50",
+        "img": "../img/gallery/item1.jpeg"
+    },
+    "4.11" : {
+        "name": "Мыло Торт",
+        "price": "60",
+        "img": "../img/gallery/item2.jpeg"
+    },
+    "4.12" : {
+        "name": "Мыло Сердце",
+        "price": "40",
+        "img": "../img/gallery/item3.jpeg"
+    }
+}

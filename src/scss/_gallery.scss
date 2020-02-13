@@ -42,7 +42,7 @@
 }
 
 .gallery-previews {
-	padding: 100px 0;
+	padding: 100px 0 50px 0;
 }
 .previews {
 	display: grid;
@@ -115,6 +115,10 @@
 
 .gallery-grid {
 	padding: 50px 0;
+	&__title {
+		font-size: 3rem;
+		margin-bottom: 50px;
+	}
 }
 
 .cards {
@@ -126,8 +130,11 @@
 }
 .card {
 	&__item {
+		box-shadow:  0px 0px 10px 0px rgba(130,125,130,1);
 		text-decoration: none;
 		color: $current-color;
+		position: relative;
+		text-align: left;
 		&:hover .card__img-wrap::before ,
 		&:focus .card__img-wrap::before {
 			height: 100%;
@@ -165,16 +172,31 @@
 	&__title {
 		font-size: 1.7rem;
 		text-transform: uppercase;
-		margin-top: 15px;
 		font-weight: 900;
 		letter-spacing: -1px;
 	}
-	&__prise-value,
+	&__price-value,
 	&__currency {
 		color: #976f55;
 		font-weight: bold;
 	}
+	&__body {
+		position: relative;
+		padding: 15px 15px;
+	}
 
+}
+.item-cart {
+	fill: rgba(0, 0, 0, .15);
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 10%;
+	bottom: 25px;
+	cursor: pointer;
+}
+.active-cart {
+	fill: #34ab48 !important;
 }
 .hide {
 	display: none;
