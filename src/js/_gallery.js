@@ -1,13 +1,55 @@
-var cart = {}; //корзина	
+var cart = {}; //корзина
 $(document).ready(function() {
 	'use strict';
+	
 	loadGoodsWoman();
+	loadGoodsMan();
+	loadGoodsTop();
+	loadGoodsHoliday();
+	loadGoodsPerfume();
+	loadGoodsBouquet();
+	loadGoodsBeauty();
+	loadGoodsBaby();
+	loadAllGoods();
 	checkCart();
 	showCartCount();
+
+
+	//Показ выбранной галереи
+	$('.showGallery').on('click', function() {
+		$('.gallery-grid').removeClass('show');
+		if ($(this).hasClass('womanShow')) {
+			$('#woman-collection').addClass('show');
+		}
+		if ($(this).hasClass('manShow')) {
+			$('#man-collection').addClass('show');
+		}
+		if ($(this).hasClass('holidayShow')) {
+			$('#holiday-collection').addClass('show');
+		}
+		if ($(this).hasClass('beautyShow')) {
+			$('#beauty-collection').addClass('show');
+		}
+		if ($(this).hasClass('babyShow')) {
+			$('#baby-collection').addClass('show');
+		}
+		if ($(this).hasClass('bouquetShow')) {
+			$('#bouquet-collection').addClass('show');
+		}
+		if ($(this).hasClass('perfumeShow')) {
+			$('#perfume-collection').addClass('show');
+		}
+	});
+
+	$('#btn-all').on('click', function() {
+		$('.gallery-grid').removeClass('show');
+		$('#allGoods').addClass('show');
+	});
+
 });
 
-function loadGoodsWoman() {
-	$.getJSON('data/goods.json', function (data) { 
+function addGalleryGrid(loc, section) {
+	$.getJSON(loc, function(data) {
 		var html = '';
 		for (var card in data) {
      	html += '<div class="card__item">';
@@ -21,25 +63,56 @@ function loadGoodsWoman() {
 		html += '</svg>';
 		html += '</div>';
 		html += '</div>';	
-		}
-		$('#goods').html(html);
+		};
+		$(section).html(html);
 		$('svg.item-cart').on('click', addToCart);
 	});
+}
+
+
+//создаем динамическую галерею 
+function loadGoodsWoman() {
+	addGalleryGrid('data/goods-woman.json', '.goodsWoman');
+}
+function loadGoodsMan() {
+	addGalleryGrid('data/goods-man.json', '.goodsMan');
+}
+function loadGoodsTop() {
+	addGalleryGrid('data/goods-top.json', '.goodsTop');
+}	
+function loadGoodsHoliday() {
+	addGalleryGrid('data/goods-holiday.json', '.goodsHoliday');
+}	
+function loadGoodsBaby() {
+	addGalleryGrid('data/goods-baby.json', '.goodsBaby');
+}	
+function loadGoodsBeauty() {
+	addGalleryGrid('data/goods-beauty.json', '.goodsBeauty');
+}	
+function loadGoodsBouquet() {
+	addGalleryGrid('data/goods-bouquet.json', '.goodsBouquet');
+}
+function loadGoodsPerfume() {
+	addGalleryGrid('data/goods-perfume.json', '.goodsPerfume');
+}
+function loadAllGoods() {
+	addGalleryGrid('data/allGoods.json', '.goodsAll');
 }	
 
 function addToCart() {
 	//Выделяем активированую кнопку корзины
 	var current = $(this).addClass('active-cart');
-	//добавляем товар в корзину
+	//добавляем товар в корзину при клике
 	var art = $(this).attr('data-id');
-	if (cart[art]!=undefined) {
-		cart[art]++;
-	} else {
+	// if (cart[art]!=undefined) {
+	// 	cart[art]++;
+	// } else {
 		cart[art] = 1;
-	}
 	localStorage.setItem('cart', JSON.stringify(cart));
 	showCartCount();
 };
+
+
 function checkCart() {
 	//проверка корзины в localStorage
 	if (localStorage.getItem('cart') != null) {

@@ -99,14 +99,19 @@ addAnimated();
 
 
 
-//Отслеживание перемещения и появление кнопки вверх********************************************
+//Отслеживание перемещения и появление кнопки вверх*********************
     var g_top = 0;
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 1000) {
 			$('.btn-top__wrap').css('transform', 'translateY(0)');
 		} else if ($(this).scrollTop() < 1000) {
 				$('.btn-top__wrap').css('transform', 'translateY(100%)').css('visibility', 'visible');	
-		}
+		};
+		if ($(this).scrollTop() > 0) {
+				$('.header').addClass('fixedHeader');
+		} else if ($(this).scrollTop() < 20) {
+				$('.header').removeClass('fixedHeader');
+		};
 	});
 //Бургер*******************************************************************
 	$('#burger').click(function(e) {
