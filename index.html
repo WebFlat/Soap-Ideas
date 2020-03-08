@@ -24,9 +24,10 @@
 				<div class="burger__line"></div>
 			</div>
 			<section class="header__top">
-				<h1 class="header__title">
+				<div class="header__title">
 					<a href="../index.html" class="header__logo">Handmade soap ideas</a>
-				</h1>
+					<h1 class="header__sublogo">Магазин мыла ручной работы</h1>
+				</div>
 				<div class="header__cart-wrap">
 					<a href="../cart.html" class="header__cart-link">
 						<!-- <i class="fas fa-cart-arrow-down header__cart"></i> -->
@@ -38,11 +39,23 @@
 			</section>
 			<nav class="header__nav" id="header__nav">
 				<ul class="header__links">
-					<li><a href="../index.html" class="header__link">Главная</a></li>
-					<li><a href="../top.html" class="header__link">Топ продаж</a></li>
-					<li><a href="../gallery.html" class="header__link">Галерея</a></li>
-					<li><a href="../aboutProduct.html" class="header__link">О продукции</a></li>
-					<li><a href="../contact.html" class="header__link">Контакты</a></li>
+					<li class="header__item"><a href="../index.html" class="header__link">Главная</a></li>
+					<li class="header__item"><a href="../top.html" class="header__link">Топ продаж</a></li>
+					<li class="submenuShow header__item"><a href="../gallery.html" class="header__link">Галерея</a>
+						<nav class="gallery__nav">
+							<ul class="gallery__links">
+								<li class="gallery__link-item"><a href="../holiday-collection.html" class="gallery__link">Праздничные коллекции</a></li>
+								<li class="gallery__link-item"><a href="../beauty-collection.html" class="gallery__link">Средства по уходу</a></li>
+								<li class="gallery__link-item"><a href="../man-collection.html" class="gallery__link">Мужская коллекция</a></li>
+								<li class="gallery__link-item"><a href="../woman-collection.html" class="gallery__link">Женская коллекция</a></li>
+								<li class="gallery__link-item"><a href="../baby-collection.html" class="gallery__link">Детская коллекция</a></li>
+								<li class="gallery__link-item"><a href="../bouquet-collection.html" class="gallery__link">Мыльные букеты</a></li>
+								<li class="gallery__link-item"><a href="../perfume-collection.html" class="gallery__link">Духи ручной работы</a></li>	
+							</ul>
+						</nav>
+					</li>
+					<li class="header__item"><a href="../aboutProduct.html" class="header__link">О продукции</a></li>
+					<li class="header__item"><a href="../contact.html" class="header__link">Контакты</a></li>
 				</ul>
 			</nav>
 		</section>
@@ -64,33 +77,33 @@
 			<div class="slide">
 				<img src="./img/slide1.jpg" class="slide__img" alt="soap" loading="lazy">
 				<div class="slide__content">
-					<h2 class="slide__title">Сахарный скраб</h2>
+					<h3 class="slide__title">Сахарный скраб</h2>
 					<p class="slide__text">Средство, благодаря которому , кожа становится более сияющей и гладкой!</p>
-					<a href="#" class="slide__link">Заказать</a>
+					<a href="../beauty-collection.html" class="slide__link">Заказать</a>
 				</div>
 			</div>
 			<div class="slide">
 				<img src="./img/slide2.jpg" class="slide__img" alt="soap" loading="lazy">
 				<div class="slide__content">
-					<h2 class="slide__title">Мыло Торт</h2>
+					<h3 class="slide__title">Мыло Торт</h2>
 					<p class="slide__text">Оригинальный подарок для любого случая. Он удивиит и порадует своего обладателя!</p>
-					<a href="#" class="slide__link">Заказать</a>
+					<a href="../woman-collection.html" class="slide__link">Заказать</a>
 				</div>
 			</div>
 			<div class="slide">
 				<img src="./img/slide3.jpg" class="slide__img" alt="soap" loading="lazy">
 				<div class="slide__content">
-					<h2 class="slide__title">Мыльный цветок</h2>
+					<h3 class="slide__title">Мыльный цветок</h2>
 					<p class="slide__text">Его хрупкость и утонченность деталей захватывают дух!</p>
-					<a href="#" class="slide__link">Заказать</a>
+					<a href="../bouquet-collection.html" class="slide__link">Заказать</a>
 				</div>
 			</div>
 			<div class="slide">
 				<img src="./img/slide4.jpg" class="slide__img" alt="soap" loading="lazy">
 				<div class="slide__content">
-					<h2 class="slide__title">Натуральный массажер ручной работы</h2>
+					<h3 class="slide__title">Натуральный массажер ручной работы</h2>
 					<p class="slide__text">Мыло с люфой стимулирует кровообращение и обладает антицеллюлитным действием!</p>
-					<a href="#" class="slide__link">Заказать</a>
+					<a href="../beauty-collection.html" class="slide__link">Заказать</a>
 				</div>
 			</div>
 		</article>
@@ -205,7 +218,7 @@
 			</div>
 		</article>
 		<article class="about-card">
-			<a href="#" class="about-card__item about-card__item--1">
+			<a href="../aboutProduct.html#delivery" class="about-card__item about-card__item--1">
 				<svg class="about-card__icon" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
 		<g>
 			<g id="_x39__31_">
@@ -255,7 +268,7 @@
 				</svg>
 				<h5 class="about-card__title">Товар в наличии и под заказ</h5>
 			</a>
-			<a href="#" class="about-card__item about-card__item--2">
+			<a href="../aboutProduct.html" class="about-card__item about-card__item--2">
 				<svg class="about-card__icon" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
 				<g>
 				<g id="_x35__15_">
@@ -308,7 +321,7 @@
 				</svg>
 				<h5 class="about-card__title">Высокое качество изделий</h5>
 			</a>
-			<a href="#" class="about-card__item about-card__item--3">
+			<a href="../aboutProduct.html#delivery" class="about-card__item about-card__item--3">
 				<svg class="about-card__icon" x="0px" y="0px" viewBox="0 0 97.16 97.16" style="enable-background:new 0 0 97.16 97.16;" xml:space="preserve"
 			>
 		<g>
@@ -699,7 +712,7 @@
 							<div class="footer__soc-wrap">
 								<span>Следите за нами</span>
 								<div class="footer__soc-links">
-									<a href="#" class="footer__link-soc">
+									<a href="https://www.facebook.com/profile.php?id=100017132774085" class="footer__link-soc">
 										<svg class="footer__icon-soc" x="0px" y="0px"
 								viewBox="0 0 167.657 167.657" style="enable-background:new 0 0 167.657 167.657;" xml:space="preserve">
 							<g>
@@ -799,16 +812,16 @@
 						<div class="footer__gallery">
 							<h6 class="footer__gallery-title">Галерея</h6>
 							<div class="footer__gallery-wrap">
-								<a class="footer__gallery-item">
+								<a href="../beauty-collection.html" class="footer__gallery-item">
 									<img data-src="./img/scrubs.jpg" alt="soap" class="lazyload" class="footer__gallery-img">
 								</a>
-								<a class="footer__gallery-item">
+								<a href="../woman-collection.html" class="footer__gallery-item">
 									<img data-src="./img/women.jpg" alt="soap" class="lazyload" class="footer__gallery-img">
 								</a>
-								<a class="footer__gallery-item">
+								<a href="../woman-collection.html" class="footer__gallery-item">
 									<img data-src="./img/slide3.jpg" alt="soap" class="lazyload" class="footer__gallery-img">
 								</a>
-								<a class="footer__gallery-item">
+								<a href="../beauty-collection.html" class="footer__gallery-item">
 									<img data-src="./img/slide4.jpg" alt="soap" class="lazyload" class="footer__gallery-img">
 								</a>
 							</div>
@@ -825,7 +838,7 @@
 	</section>
 	<!-- скрипты -->
 	
-	<script src="js/main.min.js" type="text/javascript"></script>
+	<script src="js/main.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
