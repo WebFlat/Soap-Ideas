@@ -834,6 +834,7 @@ body {
 		z-index: -1;
 		@include myPos();
 		object-fit: cover;
+		min-width: 100%;
 	}
 	&__wrap {
 		width: 80%;
