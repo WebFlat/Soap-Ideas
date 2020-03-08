@@ -9,7 +9,7 @@
 @import 'contact';
 @import 'aboutProduct';
 @import 'cart';
-// @import 'baguetteBox';
+
 
 
 
@@ -71,9 +71,12 @@ body {
 		align-items: center;
 		padding: 0 50px;
 		border-bottom: 2px solid rgba(239,196,163,.9);
+		@include tr(.3s)
 	}
 	&__title {
 		@include tr(.2s);
+		display: flex;
+		flex-direction: column;
 		&:hover,
 		&:focus {
 			transform: scale(1.05);
@@ -88,6 +91,14 @@ body {
 		font-weight: 500;
 		text-decoration: none;
 		color: $lite-color;
+		line-height: 1;
+		padding: 5px 0;
+	}
+	&__sublogo {
+		font-size: 1.6rem;
+		line-height: 1;
+		padding-bottom: 6px;
+		font-family: 'Ma Shan Zheng', cursive;
 	}
 	&__cart {
 		font-size: 3rem;
@@ -128,7 +139,6 @@ body {
 	}
 	&__nav {
 		height: 50px;
-		width: 90%;
 		margin: 0 auto;
 		@include tr(.5s);
 	}
@@ -140,7 +150,8 @@ body {
 		width: 100%;
 		height: 100%;
 		padding: 0;
-		li {
+	}	
+	&__item {
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -160,7 +171,7 @@ body {
 			&:active .header__link {
 				color: $lite-color;
 			}
-		}
+	
 	}
 	&__link {
 		color: $lite-color;
@@ -171,6 +182,7 @@ body {
 		@include tr(.2s);
 		background: transparent;
 		display: flex;
+		padding: 0 10px;
 		width: 100%;
 		height: 100%;
 		justify-content: center;
@@ -178,12 +190,78 @@ body {
 	}
 
 }
+.submenuShow {
+	position: relative;
+}
+.submenuShow:hover .gallery__links,
+.submenuShow:focus .gallery__links {
+	transform: translateY(0);
+}
+.submenuShow:hover .gallery__nav,
+.submenuShow:focus .gallery__nav {
+	visibility: visible;
+}
+.gallery {
+	&__nav {
+		visibility: hidden;
+		overflow: hidden;
+		width: 250px;
+		position: absolute;
+		top: 50px;
+		left: 0;
+	}
+	&__links {
+		@include tr(.4s);
+		display: flex;
+		transform: translateY(-100%);
+		overflow: hidden;
+		margin: 0;
+		padding: 5px 0 5px 15px;
+		
+		flex-direction: column;
+		background: rgba(39,39,39,0.8);
+		align-items: center;
+		justify-content: center;
+	}
+	&__link {
+		text-decoration: none;
+		text-transform: capitalize;
+		color: $lite-color;
+		font-size: 1.4rem;
+		border-left: 4px solid transparent;
+		@include tr(.15s);
+	}
+	&__link-item {
+		display: flex;
+		justify-content: flex-start;
+		width: 100%;
+		padding: 5px;
+		&:hover .gallery__link,
+		&:active .gallery__link,
+		&:focus .gallery__link {
+			border-left: 4px solid $hover-color;
+			padding-left: 20px;
+		}
+	}
+}
 .fixedHeader {
 	position: fixed;
 	top: 0;
 	width: 100%;
 	max-width: 100%;
 	background-color: rgba(39, 39, 39, 1);
+	.header__logo {
+		font-size: 2.2rem;
+	}
+	.header__top {
+		padding: 0 25%;
+	}
+	.header__nav {
+		width: 80%;
+	}
+	.header__link {
+		font-size: 1.4rem;
+	}
 }
 .current-tab {
 	background-color: $hover-color;
@@ -250,7 +328,7 @@ body {
 		&.rotate {
 			&:first-of-type {
 				transform: rotate(-45deg);
-				top: 10px;
+				top: 9px;
 			}
 			&:last-of-type {
 				transform: rotate(45deg);
@@ -291,9 +369,9 @@ body {
 	position: relative;
 	overflow: hidden;
 	&__img {
-		// @include myPos(0, 50%, -50%, 0);
+		@include myPos(0, 50%, -50%, 0);
 		width: 100%;
-		// height: 100%;
+		height: 100%;
 		object-fit: cover;
 		z-index: -1;
 		position: relative;
@@ -475,7 +553,7 @@ body {
 			width: 100%;
 			background:rgba(0,0,0,.3);
 			position: absolute;
-			top: 15px;
+			top: 13px;
 			
 		}
 	}
@@ -1034,6 +1112,7 @@ body {
 	}
 	&__gallery {
 		text-align: center;
+		background: rgb(39, 39, 39);
 	}
 	&__logo {
 		font-size: 2.5rem;
@@ -1173,6 +1252,7 @@ body {
 	}
 	&__gallery-wrap {
 		margin-top: 20px;
+		padding-top: 10px;
 		height: 100%;
 		display: grid;
 		justify-content: center;

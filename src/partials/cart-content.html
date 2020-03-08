@@ -18,16 +18,33 @@
 				Удалить
 			</h5>
 		</div>
-		<img src="./img/loading.gif" alt="loading" id="cart-loading" class="loading-img">
 		<div class="table-cart__items" id="cart">
 		</div>
 		<div class="table-cart__total">
-			<span class="table-cart__title table-cart__title--name">Итого</span>
+			<span class="table-cart__title table-cart__title--name bold">Итого</span>
 			<span class="table-cart__title"></span>
 			<span class="table-cart__title"></span>
-			<span class="table-cart__title" id="total-sum">0</span>
+			<span class="table-cart__title bold" id="total-sum">0</span>
 			<span class="table-cart__title"></span>
 		</div>
 	</div>
-	<a href="../order.html" class="cart-content__btn" id="order">Оформить заказ</a>
+	<div class="cart-content__btn-wrap">
+		<input type="button" class="cart-content__btn" id="order" value="Оформить заказ">
+	</div>
+	<article class="checkout">
+		<div class="checkout__form disabledY">
+			<div class="checkout__person">
+				<input type="text" placeholder="Имя" class="checkout__data checkout__data--person" id="name" name="name" required>
+				<input type="text" placeholder="Фамилия" class="checkout__data checkout__data--person" id="soname" required>
+			</div>	
+      		<input type="text" placeholder="Телефон" pattern="[\+]\d{12}" class="checkout__data" id="phone" required>
+      		<input type="email" placeholder="Эл.почта" class="checkout__data" id="email" required>
+			<div class="checkout__person">
+				<input type="text" placeholder="Город" class="checkout__data checkout__data--person" id="city" required>
+				<input type="text" placeholder="Отделение Новой Почты" class="checkout__data checkout__data--person" id="numberNP" required pattern="^[ 0-9]+$">
+			</div>
+			<input type="text" placeholder="Адрес" class="checkout__data" id="address" required>
+			<input type="submit" name="submit" value="Отправить заказ" class="cart-content__btn" id="sendCheckout">
+		</div>
+	</article>
 </section>

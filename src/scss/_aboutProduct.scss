@@ -1,5 +1,5 @@
 .descriptionProduct {
-	padding: 50px 0 100px 0;
+	padding: 0 0 50px 0;
 	text-align: left;
 	&__title {
 		text-transform: uppercase;
@@ -30,7 +30,18 @@
 .soap-about,
 .perfume-about,
 .lufa-about {
-	margin-top: 50px;
+	margin-top: 30px;
 	overflow: hidden;
 	position: relative;
+}
+.delivery {
+	padding: 0 0 20px 0;
+	text-align: left;
+	&__title {
+		text-transform: uppercase;
+		font-size: 3.5rem;
+	}
+	&__text {
+		margin-top: 20px;
+	}
 }

@@ -4,7 +4,7 @@ if(isset($_POST['submit'])){
     $from = "kristina@soapideas.cc.ua"; // Здесь нужно написать e-mail, от кого будут приходить письма, например no-reply@epicblog.net
     $name = $_POST['name'];
     $subject = "Форма отправки сообщений с сайта";
-    $message = "Имя посетителя: ". $name . "  | Адрес электронной почты: "  . $_POST['email'] . "  | Телефон: " . $_POST['phone'] . "  | Комментарий: " . $_POST['message'];
+    $message = "<br /> Имя посетителя: ". $name . "<br />  | Адрес электронной почты: "  . $_POST['email'] . "<br />  | Телефон: " . $_POST['phone'] . "<br />  | Комментарий: " . $_POST['message'];
 
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
@@ -16,6 +16,6 @@ if(isset($_POST['submit'])){
 ?>
 <!--Переадресация на главную страницу сайта, через 3 секунды-->
 <script language="JavaScript" type="text/javascript">
-function changeurl(){eval(self.location="https://dist");}
+function changeurl(){eval(self.location="http://soapideas.cc.ua");}
 window.setTimeout("changeurl();",3000);
 </script>

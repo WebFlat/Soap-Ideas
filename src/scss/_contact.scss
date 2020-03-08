@@ -129,17 +129,19 @@
 	}
 	&__input {
 		width: 32%;
+		text-transform: uppercase;
 		min-width: 300px;
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		padding: 20px;
 		font-weight: bold;
 		background: #f7f7f7;
 		border: 0;
 		text-indent: 0;
-		outline: none;
+		outline: transparent;
 		@include tr(.2s);
 		&:hover,
-		&:active {
+		&:active,
+		&:focus {
 			box-shadow: 0 0 10px 5px rgba(0,0,0,.17);
 		}
 		&::placeholder {

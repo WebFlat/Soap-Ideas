@@ -34,6 +34,7 @@ $('document').ready(function(){
 
 
 
+
 //Animation*****************************************************************
 	jQuery.fn.extend({
 		onAppearanceAddClass: function(class_to_add) {
@@ -75,11 +76,11 @@ $('document').ready(function(){
  	 }
 	});
 
-$('.popular__item--2,.popular__item--3, .offer__item--5, .about-card__item--3, .about__item--2, .footer__gallery, .data-mail').onAppearanceAddClass('animated fadeInRight fast');
+$('.popular__item--2,.popular__item--3, .offer__item--5, .offer__item--2, .about-card__item--3, .about__item--2, .data-mail').onAppearanceAddClass('animated fadeInRight fast');
 
-$('.offer__item--4, .offer__item--6, .offer__item--7, .popular__item--5, .popular__item--4, .reviews__title-wrap, .popular__title-wrap .offer__item--1, .offer__item--2, .footer__mail, .form-feedback__main').onAppearanceAddClass('fadeInUp animated slow');
-$('.descriptionProduct__text').onAppearanceAddClass('fadeInUp animated slow');
-$('.offer__item--3, .about-card__item--1, .popular__item--1, .about__item--1,  .footer__info, .data-tel').onAppearanceAddClass('animated fadeInLeft fast');
+$('.offer__item--4, .offer__item--6, .offer__item--7, .popular__item--5, .popular__item--4, .reviews__title-wrap, .popular__title-wrap, .footer__top, .offer__item--1,.form-feedback__main').onAppearanceAddClass('fadeInUp animated slow');
+$('.descriptionProduct__text').onAppearanceAddClass('fadeInRight animated slow');
+$('.offer__item--3, .about-card__item--1, .popular__item--1, .about__item--1, .data-tel').onAppearanceAddClass('animated fadeInLeft fast');
 
 
 var myArray = $('.slide__title');
@@ -89,7 +90,6 @@ for (var i = 0; i < myArray.length; i++) {
 var myArray2 = $('.slide');
 function addAnimated() {
 	for (var j = 0; j < myArray2.length; j++) {
-		console.log(myArray2.length);
 		if ($('.owl-item').hasClass('active')) {
 			$('.slide__title').addClass('animated');
 			}
@@ -107,12 +107,16 @@ addAnimated();
 		} else if ($(this).scrollTop() < 1000) {
 				$('.btn-top__wrap').css('transform', 'translateY(100%)').css('visibility', 'visible');	
 		};
-		if ($(this).scrollTop() > 0) {
+//Изменение меню при скролле*********************************************
+		if ($(this).scrollTop() > 0 && (window.matchMedia("(min-width: 1024px)").matches)) {
 				$('.header').addClass('fixedHeader');
 		} else if ($(this).scrollTop() < 20) {
 				$('.header').removeClass('fixedHeader');
-		};
+		};;
 	});
+
+
+
 //Бургер*******************************************************************
 	$('#burger').click(function(e) {
 		e.preventDefault();
@@ -136,9 +140,6 @@ addAnimated();
 
 
 
-
-//Галерея***************************************************************
-	// baguetteBox.run('.cards');
 
 
 });

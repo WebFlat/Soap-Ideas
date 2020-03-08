@@ -5,9 +5,10 @@
 		<div class="burger__line"></div>
 	</div>
 	<section class="header__top">
-		<h1 class="header__title">
+		<div class="header__title">
 			<a href="../index.html" class="header__logo">Handmade soap ideas</a>
-		</h1>
+			<h1 class="header__sublogo">Магазин мыла ручной работы</h1>
+		</div>
 		<div class="header__cart-wrap">
 			<a href="../cart.html" class="header__cart-link">
 				<!-- <i class="fas fa-cart-arrow-down header__cart"></i> -->
@@ -19,11 +20,23 @@
 	</section>
 	<nav class="header__nav" id="header__nav">
 		<ul class="header__links">
-			<li><a href="../index.html" class="header__link">Главная</a></li>
-			<li><a href="../top.html" class="header__link">Топ продаж</a></li>
-			<li><a href="../gallery.html" class="header__link">Галерея</a></li>
-			<li><a href="../aboutProduct.html" class="header__link">О продукции</a></li>
-			<li><a href="../contact.html" class="header__link">Контакты</a></li>
+			<li class="header__item"><a href="../index.html" class="header__link">Главная</a></li>
+			<li class="header__item"><a href="../top.html" class="header__link">Топ продаж</a></li>
+			<li class="submenuShow header__item"><a href="../gallery.html" class="header__link">Галерея</a>
+				<nav class="gallery__nav">
+					<ul class="gallery__links">
+						<li class="gallery__link-item"><a href="../holiday-collection.html" class="gallery__link">Праздничные коллекции</a></li>
+						<li class="gallery__link-item"><a href="../beauty-collection.html" class="gallery__link">Средства по уходу</a></li>
+						<li class="gallery__link-item"><a href="../man-collection.html" class="gallery__link">Мужская коллекция</a></li>
+						<li class="gallery__link-item"><a href="../woman-collection.html" class="gallery__link">Женская коллекция</a></li>
+						<li class="gallery__link-item"><a href="../baby-collection.html" class="gallery__link">Детская коллекция</a></li>
+						<li class="gallery__link-item"><a href="../bouquet-collection.html" class="gallery__link">Мыльные букеты</a></li>
+						<li class="gallery__link-item"><a href="../perfume-collection.html" class="gallery__link">Духи ручной работы</a></li>	
+					</ul>
+				</nav>
+			</li>
+			<li class="header__item"><a href="../aboutProduct.html" class="header__link">О продукции</a></li>
+			<li class="header__item"><a href="../contact.html" class="header__link">Контакты</a></li>
 		</ul>
 	</nav>
 </section>
