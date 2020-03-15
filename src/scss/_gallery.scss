@@ -140,8 +140,8 @@
 .cards {
 	display: grid;
 	width: 100%;
-	margin: 0 auto;
-  	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	justify-content: center;
+  	grid-template-columns: repeat(auto-fit, minmax(245px, .7fr));
   	grid-gap: 30px;
 }
 .card {
@@ -191,19 +191,28 @@
 		font-weight: 900;
 		letter-spacing: -1px;
 		text-overflow: ellipsis;
-		width: 245px;
 		overflow: hidden;
+		max-height: 53px;
+		min-height: 53px;
 	}
 	&__price-value,
 	&__currency,
-	&__description,
+	&__description1,
 	&__description2 {
 		color: #976f55;
-		font-weight: bold;
+		text-overflow: ellipsis;
+		overflow-wrap: break-word;
+		font-size: 1.4rem;
+		margin-top: 5px;
 	}
 	&__body {
-		position: relative;
 		padding: 15px 15px 47px 15px;
+	}
+	&__price-value,
+	&__currency {
+		color: green;
+		font-weight: bold;
+		font-size: 1.9rem;
 	}
 
 }

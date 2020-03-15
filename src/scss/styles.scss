@@ -162,6 +162,7 @@ body {
 			&:hover .header__link,
 			&:focus .header__link {
 				color: $current-color;
+				text-shadow: none;
 			}
 			&:hover,
 			&:focus,
@@ -177,6 +178,7 @@ body {
 		color: $lite-color;
 		text-transform: uppercase;
 		font-size: 1.6rem;
+		text-shadow: 1px 0px 5px #CE5937;
 		text-decoration: none;
 		font-weight: bold;
 		@include tr(.2s);
@@ -852,7 +854,7 @@ body {
 	&__social {
 		display: flex;
 		justify-content: space-around;
-		width: 30%;
+		width: 20%;
 		margin: 50px auto 0 auto;
 	}
 	&__icon-soc {
@@ -1156,6 +1158,8 @@ body {
 	}
 	&__time-wrap {
 		margin-top: 20px;
+		display: flex;
+		justify-content: center;
 	}
 	&__tel-wrap {
 		margin-top: 40px;
@@ -1197,6 +1201,7 @@ body {
 	}
 	&__form {
 		text-align: center;
+		position: relative;
 	}
 	&__email,
 	&__submit {
@@ -1219,6 +1224,12 @@ body {
 			border-color: $hover-color;
 			box-shadow: 0px 0px 21px 9px rgba(0,0,0,0.75);
 		}
+	}
+	&__label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
 	}
 	&__submit {
 		margin-top: 10px;
@@ -1275,10 +1286,6 @@ body {
 		&:active {
 			background: rgba(0,0,0,.5);
 			box-shadow: 0px 0px 15px 2px rgba(255, 255, 255,.5);
-		}
-		&:hover .footer__gallery-img,
-		&:active .footer__gallery-img {
-			transform: scale(1.1);
 		}
 		&:before {
 			content: "";

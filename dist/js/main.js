@@ -10784,7 +10784,7 @@ function addBouquetGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Мыльные букеты") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="Мыло '+data[card]['name']+'" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="'+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
@@ -10808,7 +10808,7 @@ function addPerfumeGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Духи ручной работы") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="Мыло '+data[card]['name']+'" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="'+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
@@ -11019,6 +11019,7 @@ var cart = {};
     if ($('cart') != null) {
       $('.checkout__form').removeClass('disabledY');
       $('.checkout').css('height', 'auto');
+      $('.cart-content__btn').css('visibility', 'visible');
     } else {
       $('.checkout__form').addClass('disabledY');
     }
@@ -11069,6 +11070,16 @@ function sendCheckout() {
 });
 $('document').ready(function(){
 	'use strict';
+
+
+//Global site tag (gtag.js) - Google Analytics
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-32347327-1');
+
+
+
 
 //Slider******************************************************************
 	$('.slides').owlCarousel({
@@ -11147,8 +11158,8 @@ $('document').ready(function(){
 
 $('.popular__item--2,.popular__item--3, .offer__item--5, .offer__item--2, .about-card__item--3, .about__item--2, .data-mail').onAppearanceAddClass('animated fadeInRight fast');
 
-$('.offer__item--4, .offer__item--6, .offer__item--7, .popular__item--5, .popular__item--4, .reviews__title-wrap, .popular__title-wrap, .footer__top, .offer__item--1,.form-feedback__main').onAppearanceAddClass('fadeInUp animated slow');
-$('.descriptionProduct__text').onAppearanceAddClass('fadeInRight animated slow');
+$('.offer__item--4, .offer__item--6, .offer__item--7, .popular__item--5, .popular__item--4, .reviews__title-wrap, .popular__title-wrap, .footer__top, .offer__item--1,.form-feedback__main').onAppearanceAddClass('fadeInUp animated fast');
+$('.descriptionProduct__text').onAppearanceAddClass('fadeInRight animated fast');
 $('.offer__item--3, .about-card__item--1, .popular__item--1, .about__item--1, .data-tel').onAppearanceAddClass('animated fadeInLeft fast');
 
 

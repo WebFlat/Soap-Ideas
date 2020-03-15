@@ -115,6 +115,7 @@ var cart = {};
     if ($('cart') != null) {
       $('.checkout__form').removeClass('disabledY');
       $('.checkout').css('height', 'auto');
+      $('.cart-content__btn').css('visibility', 'visible');
     } else {
       $('.checkout__form').addClass('disabledY');
     }

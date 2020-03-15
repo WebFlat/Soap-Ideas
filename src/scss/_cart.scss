@@ -140,10 +140,17 @@
 	overflow: hidden;
 	@include tr(.6s);
 	&__form {
+		position: relative;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		@include tr(.6s);
+	}
+	&__label {
+		position: absolute;
+		top: 15px;
+		left: 5px;
+		z-index: -1;
 	}
 	&__data {
 		margin-top: 20px;

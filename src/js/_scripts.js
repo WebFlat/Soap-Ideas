@@ -1,6 +1,16 @@
 $('document').ready(function(){
 	'use strict';
 
+
+//Global site tag (gtag.js) - Google Analytics
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-32347327-1');
+
+
+
+
 //Slider******************************************************************
 	$('.slides').owlCarousel({
 		loop: true,
@@ -78,8 +88,8 @@ $('document').ready(function(){
 
 $('.popular__item--2,.popular__item--3, .offer__item--5, .offer__item--2, .about-card__item--3, .about__item--2, .data-mail').onAppearanceAddClass('animated fadeInRight fast');
 
-$('.offer__item--4, .offer__item--6, .offer__item--7, .popular__item--5, .popular__item--4, .reviews__title-wrap, .popular__title-wrap, .footer__top, .offer__item--1,.form-feedback__main').onAppearanceAddClass('fadeInUp animated slow');
-$('.descriptionProduct__text').onAppearanceAddClass('fadeInRight animated slow');
+$('.offer__item--4, .offer__item--6, .offer__item--7, .popular__item--5, .popular__item--4, .reviews__title-wrap, .popular__title-wrap, .footer__top, .offer__item--1,.form-feedback__main').onAppearanceAddClass('fadeInUp animated fast');
+$('.descriptionProduct__text').onAppearanceAddClass('fadeInRight animated fast');
 $('.offer__item--3, .about-card__item--1, .popular__item--1, .about__item--1, .data-tel').onAppearanceAddClass('animated fadeInLeft fast');
 
 

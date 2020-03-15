@@ -177,7 +177,7 @@ function addBouquetGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Мыльные букеты") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="Мыло '+data[card]['name']+'" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="'+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
@@ -201,7 +201,7 @@ function addPerfumeGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Духи ручной работы") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="Мыло '+data[card]['name']+'" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="'+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';

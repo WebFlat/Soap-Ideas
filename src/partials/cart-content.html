@@ -35,15 +35,22 @@
 		<div class="checkout__form disabledY">
 			<div class="checkout__person">
 				<input type="text" placeholder="Имя" class="checkout__data checkout__data--person" id="name" name="name" required>
+				<label class="checkout__label" for="name">Имя</label>
 				<input type="text" placeholder="Фамилия" class="checkout__data checkout__data--person" id="soname" required>
+				<label for="soname" class="checkout__label">Фамилия</label>
 			</div>	
       		<input type="text" placeholder="Телефон" pattern="[\+]\d{12}" class="checkout__data" id="phone" required>
+			  <label for="phone" class="checkout__label">Телефон</label>
       		<input type="email" placeholder="Эл.почта" class="checkout__data" id="email" required>
+			<label for="email" class="checkout__label">Эл.почта</label>
 			<div class="checkout__person">
 				<input type="text" placeholder="Город" class="checkout__data checkout__data--person" id="city" required>
+				<label for="city" class="checkout__label">Город</label>
 				<input type="text" placeholder="Отделение Новой Почты" class="checkout__data checkout__data--person" id="numberNP" required pattern="^[ 0-9]+$">
+				<label for="numberNP" class="checkout__label">Отделение Новой Почты</label>
 			</div>
 			<input type="text" placeholder="Адрес" class="checkout__data" id="address" required>
+			<label for="address" class="checkout__label">Адрес</label>
 			<input type="submit" name="submit" value="Отправить заказ" class="cart-content__btn" id="sendCheckout">
 		</div>
 	</article>

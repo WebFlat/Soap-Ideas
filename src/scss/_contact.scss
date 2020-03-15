@@ -93,7 +93,7 @@
 }
 .form-feedback {
 	text-align: left;
-	&__label {
+	&__label-title {
 		display: flex;
 		align-items: center;
 	}
@@ -127,7 +127,14 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
+	&__label {
+		position: absolute;
+		top: 15px;
+		left: 5px;
+		z-index: -1;
+	}
 	&__input {
+		position: relative;
 		width: 32%;
 		text-transform: uppercase;
 		min-width: 300px;

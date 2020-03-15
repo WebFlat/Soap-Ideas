@@ -157,17 +157,21 @@
 	</article>
 	<article class="contacts__form">
 		<div class="form-feedback">
-			<label for="#form-feedback" class="form-feedback__label">
+			<label for="form-feedback" class="form-feedback__label-title">
 				<span class="form-feedback__title">СВЯЗАТЬСЯ</span>
 				<span class="form-feedback__subtitle">если у вас есть какие-либо вопросы, просто заполните контактную форму, и мы ответим вам в ближайшее время.</span>
 			</label>
 			<form action="sendMessage.php" method="POST" id="form-feedback" class="form-feedback__main">
 				<div class="form-feedback__main-wrap">
-					<input type="text" name="name" class="form-feedback__input" placeholder="Ваше Имя" required>
-					<input type="email" name="email" class="form-feedback__input" placeholder="Почта" required>
-					<input type="text" pattern="[\+]\d{12}" name="phone" class="form-feedback__input" placeholder="Телефон (+38....)" required>
+					<input type="text" name="name" class="form-feedback__input" placeholder="Ваше Имя" required id="feedName">
+					<label for="feedName" class="form-feedback__label">Ваше Имя</label>
+					<input type="email" name="email" class="form-feedback__input" placeholder="Почта" id="feedMail" required>
+					<label for="feedMail" class="form-feedback__label">Почта</label>
+					<input type="text" pattern="[\+]\d{12}" name="phone" class="form-feedback__input" placeholder="Телефон (+38....)" required id="feedTel">
+					<label for="feedTel" class="form-feedback__label">Телефон</label>
 				</div>
-				<textarea name="message" class="form-feedback__input form-feedback__input--text" cols="30" rows="10" placeholder="Сообщение" required></textarea>
+				<textarea name="message" class="form-feedback__input form-feedback__input--text" cols="30" rows="10" placeholder="Сообщение" required id="feedText"></textarea>
+				<label for="feedText" class="form-feedback__label">Сообщение</label>
 				<input type="submit" name="submit" class="form-feedback__btn" value="Отправить сообщение">
 			</form>
 		</div>

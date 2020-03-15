@@ -256,6 +256,16 @@
 	.table-cart__total {
 		min-width: 706px;
 	}
+	.form-feedback__label-title {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.form-feedback__title::before {
+    	left: 0;
+    	bottom: -10px;
+    	height: 2px;
+    	width: 200px;
+	}
 }
 
 
@@ -381,12 +391,6 @@
 	}
 	.form-feedback__label {
 		flex-direction: column;
-	}
-	.form-feedback__title::before {
-		left: 0;
-		bottom: -10px;
-		height: 2px;
-		width: 200px;
 	}
 	.form-feedback__title {
 		margin: 0;
