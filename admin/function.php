@@ -1,11 +1,11 @@
 <?php
-$servername = "db1.ho.ua";
-$username = "soapideas";
-$password = "soapideas";
+$servername = "dist";
+$username = "root";
+$password = "";
 $dbname = "soapideas";
 
 function connect() {
-	$conn = mysqli_connect("db1.ho.ua", "soapideas", "soapideas", "soapideas");
+	$conn = mysqli_connect("dist", "root", "", "soapideas");
 	if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error());
 	}

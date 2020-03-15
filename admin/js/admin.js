@@ -40,6 +40,7 @@ function selectGoods() {
 			$('#gid').val(data.id);
 			$('#gdescription1').val(data.description1);
 			$('#gdescription2').val(data.description2);
+			$('.content__img').attr('src', data.img).attr('alt', data.name);
 		}
 	)
 }

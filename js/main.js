@@ -10664,16 +10664,16 @@ function addWomanGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Женская коллекция") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="soap" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="Мыло '+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
 				html += '<span class="card__currency"> грн</span>';
 				html += '<p class="card__description1">' +data[card]['description1']+ '</p>';
 				html += '<p class="card__description2">' +data[card]['description2']+ '</p>';
-				html += '<svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
+				html += '<span title="Добавить в корзину"><svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
 				html +='<path d="m490.334 106.668h-399.808l-5.943-66.207c-.972-10.827-10.046-19.123-20.916-19.123h-42.667c-11.598 0-21 9.402-21 21s9.402 21 21 21h23.468c12.825 142.882-20.321-226.415 24.153 269.089 1.714 19.394 12.193 40.439 30.245 54.739-32.547 41.564-2.809 102.839 50.134 102.839 43.942 0 74.935-43.826 59.866-85.334h114.936c-15.05 41.455 15.876 85.334 59.866 85.334 35.106 0 63.667-28.561 63.667-63.667s-28.561-63.667-63.667-63.667h-234.526c-15.952 0-29.853-9.624-35.853-23.646l335.608-19.724c9.162-.538 16.914-6.966 19.141-15.87l42.67-170.67c3.308-13.234-6.71-26.093-20.374-26.093zm-341.334 341.337c-11.946 0-21.666-9.72-21.666-21.667s9.72-21.667 21.666-21.667c11.947 0 21.667 9.72 21.667 21.667s-9.72 21.667-21.667 21.667zm234.667 0c-11.947 0-21.667-9.72-21.667-21.667s9.72-21.667 21.667-21.667 21.667 9.72 21.667 21.667-9.72 21.667-21.667 21.667zm47.366-169.726-323.397 19.005-13.34-148.617h369.142z"></path>';
-				html += '</svg>';
+				html += '</svg></span>';
 				html += '</div>';
 				html += '</div>';
 			}
@@ -10688,16 +10688,16 @@ function addBeautyGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Средства по уходу") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="soap" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="Мыло '+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
 				html += '<span class="card__currency"> грн</span>';
 				html += '<p class="card__description1">' +data[card]['description1']+ '</p>';
 				html += '<p class="card__description2">' +data[card]['description2']+ '</p>';
-				html += '<svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
+				html += '<span title="Добавить в корзину"><svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
 				html +='<path d="m490.334 106.668h-399.808l-5.943-66.207c-.972-10.827-10.046-19.123-20.916-19.123h-42.667c-11.598 0-21 9.402-21 21s9.402 21 21 21h23.468c12.825 142.882-20.321-226.415 24.153 269.089 1.714 19.394 12.193 40.439 30.245 54.739-32.547 41.564-2.809 102.839 50.134 102.839 43.942 0 74.935-43.826 59.866-85.334h114.936c-15.05 41.455 15.876 85.334 59.866 85.334 35.106 0 63.667-28.561 63.667-63.667s-28.561-63.667-63.667-63.667h-234.526c-15.952 0-29.853-9.624-35.853-23.646l335.608-19.724c9.162-.538 16.914-6.966 19.141-15.87l42.67-170.67c3.308-13.234-6.71-26.093-20.374-26.093zm-341.334 341.337c-11.946 0-21.666-9.72-21.666-21.667s9.72-21.667 21.666-21.667c11.947 0 21.667 9.72 21.667 21.667s-9.72 21.667-21.667 21.667zm234.667 0c-11.947 0-21.667-9.72-21.667-21.667s9.72-21.667 21.667-21.667 21.667 9.72 21.667 21.667-9.72 21.667-21.667 21.667zm47.366-169.726-323.397 19.005-13.34-148.617h369.142z"></path>';
-				html += '</svg>';
+				html += '</svg></span>';
 				html += '</div>';
 				html += '</div>';
 			}
@@ -10712,16 +10712,16 @@ function addTopGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Топ продаж") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="soap" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="Мыло '+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
 				html += '<span class="card__currency"> грн</span>'
 				html += '<p class="card__description1">' +data[card]['description1']+ '</p>';
 				html += '<p class="card__description2">' +data[card]['description2']+ '</p>';
-				html += '<svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
+				html += '<span title="Добавить в корзину"><svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
 				html +='<path d="m490.334 106.668h-399.808l-5.943-66.207c-.972-10.827-10.046-19.123-20.916-19.123h-42.667c-11.598 0-21 9.402-21 21s9.402 21 21 21h23.468c12.825 142.882-20.321-226.415 24.153 269.089 1.714 19.394 12.193 40.439 30.245 54.739-32.547 41.564-2.809 102.839 50.134 102.839 43.942 0 74.935-43.826 59.866-85.334h114.936c-15.05 41.455 15.876 85.334 59.866 85.334 35.106 0 63.667-28.561 63.667-63.667s-28.561-63.667-63.667-63.667h-234.526c-15.952 0-29.853-9.624-35.853-23.646l335.608-19.724c9.162-.538 16.914-6.966 19.141-15.87l42.67-170.67c3.308-13.234-6.71-26.093-20.374-26.093zm-341.334 341.337c-11.946 0-21.666-9.72-21.666-21.667s9.72-21.667 21.666-21.667c11.947 0 21.667 9.72 21.667 21.667s-9.72 21.667-21.667 21.667zm234.667 0c-11.947 0-21.667-9.72-21.667-21.667s9.72-21.667 21.667-21.667 21.667 9.72 21.667 21.667-9.72 21.667-21.667 21.667zm47.366-169.726-323.397 19.005-13.34-148.617h369.142z"></path>';
-				html += '</svg>';
+				html += '</svg></span>';
 				html += '</div>';
 				html += '</div>';
 			}
@@ -10736,16 +10736,16 @@ function addManGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Мужская коллекция") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="soap" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="Мыло '+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
 				html += '<span class="card__currency"> грн</span>';
 				html += '<p class="card__description1">' +data[card]['description1']+ '</p>';
 				html += '<p class="card__description2">' +data[card]['description2']+ '</p>';
-				html += '<svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
+				html += '<span title="Добавить в корзину"><svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
 				html +='<path d="m490.334 106.668h-399.808l-5.943-66.207c-.972-10.827-10.046-19.123-20.916-19.123h-42.667c-11.598 0-21 9.402-21 21s9.402 21 21 21h23.468c12.825 142.882-20.321-226.415 24.153 269.089 1.714 19.394 12.193 40.439 30.245 54.739-32.547 41.564-2.809 102.839 50.134 102.839 43.942 0 74.935-43.826 59.866-85.334h114.936c-15.05 41.455 15.876 85.334 59.866 85.334 35.106 0 63.667-28.561 63.667-63.667s-28.561-63.667-63.667-63.667h-234.526c-15.952 0-29.853-9.624-35.853-23.646l335.608-19.724c9.162-.538 16.914-6.966 19.141-15.87l42.67-170.67c3.308-13.234-6.71-26.093-20.374-26.093zm-341.334 341.337c-11.946 0-21.666-9.72-21.666-21.667s9.72-21.667 21.666-21.667c11.947 0 21.667 9.72 21.667 21.667s-9.72 21.667-21.667 21.667zm234.667 0c-11.947 0-21.667-9.72-21.667-21.667s9.72-21.667 21.667-21.667 21.667 9.72 21.667 21.667-9.72 21.667-21.667 21.667zm47.366-169.726-323.397 19.005-13.34-148.617h369.142z"></path>';
-				html += '</svg>';
+				html += '</svg></span>';
 				html += '</div>';
 				html += '</div>';
 			}
@@ -10760,16 +10760,16 @@ function addBabyGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Детская коллекция") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="soap" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="Мыло '+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
 				html += '<span class="card__currency"> грн</span>';
 				html += '<p class="card__description1">' +data[card]['description1']+ '</p>';
 				html += '<p class="card__description2">' +data[card]['description2']+ '</p>';
-				html += '<svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
+				html += '<span title="Добавить в корзину"><svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
 				html +='<path d="m490.334 106.668h-399.808l-5.943-66.207c-.972-10.827-10.046-19.123-20.916-19.123h-42.667c-11.598 0-21 9.402-21 21s9.402 21 21 21h23.468c12.825 142.882-20.321-226.415 24.153 269.089 1.714 19.394 12.193 40.439 30.245 54.739-32.547 41.564-2.809 102.839 50.134 102.839 43.942 0 74.935-43.826 59.866-85.334h114.936c-15.05 41.455 15.876 85.334 59.866 85.334 35.106 0 63.667-28.561 63.667-63.667s-28.561-63.667-63.667-63.667h-234.526c-15.952 0-29.853-9.624-35.853-23.646l335.608-19.724c9.162-.538 16.914-6.966 19.141-15.87l42.67-170.67c3.308-13.234-6.71-26.093-20.374-26.093zm-341.334 341.337c-11.946 0-21.666-9.72-21.666-21.667s9.72-21.667 21.666-21.667c11.947 0 21.667 9.72 21.667 21.667s-9.72 21.667-21.667 21.667zm234.667 0c-11.947 0-21.667-9.72-21.667-21.667s9.72-21.667 21.667-21.667 21.667 9.72 21.667 21.667-9.72 21.667-21.667 21.667zm47.366-169.726-323.397 19.005-13.34-148.617h369.142z"></path>';
-				html += '</svg>';
+				html += '</svg></span>';
 				html += '</div>';
 				html += '</div>';
 			}
@@ -10784,16 +10784,16 @@ function addBouquetGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Мыльные букеты") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="soap" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="'+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
 				html += '<span class="card__currency"> грн</span>';
 				html += '<p class="card__description1">' +data[card]['description1']+ '</p>';
 				html += '<p class="card__description2">' +data[card]['description2']+ '</p>';
-				html += '<svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
+				html += '<span title="Добавить в корзину"><svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
 				html +='<path d="m490.334 106.668h-399.808l-5.943-66.207c-.972-10.827-10.046-19.123-20.916-19.123h-42.667c-11.598 0-21 9.402-21 21s9.402 21 21 21h23.468c12.825 142.882-20.321-226.415 24.153 269.089 1.714 19.394 12.193 40.439 30.245 54.739-32.547 41.564-2.809 102.839 50.134 102.839 43.942 0 74.935-43.826 59.866-85.334h114.936c-15.05 41.455 15.876 85.334 59.866 85.334 35.106 0 63.667-28.561 63.667-63.667s-28.561-63.667-63.667-63.667h-234.526c-15.952 0-29.853-9.624-35.853-23.646l335.608-19.724c9.162-.538 16.914-6.966 19.141-15.87l42.67-170.67c3.308-13.234-6.71-26.093-20.374-26.093zm-341.334 341.337c-11.946 0-21.666-9.72-21.666-21.667s9.72-21.667 21.666-21.667c11.947 0 21.667 9.72 21.667 21.667s-9.72 21.667-21.667 21.667zm234.667 0c-11.947 0-21.667-9.72-21.667-21.667s9.72-21.667 21.667-21.667 21.667 9.72 21.667 21.667-9.72 21.667-21.667 21.667zm47.366-169.726-323.397 19.005-13.34-148.617h369.142z"></path>';
-				html += '</svg>';
+				html += '</svg></span>';
 				html += '</div>';
 				html += '</div>';
 			}
@@ -10808,16 +10808,16 @@ function addPerfumeGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Духи ручной работы") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="soap" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="'+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
 				html += '<span class="card__currency"> грн</span>';
 				html += '<p class="card__description1">' +data[card]['description1']+ '</p>';
 				html += '<p class="card__description2">' +data[card]['description2']+ '</p>';
-				html += '<svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
+				html += '<span title="Добавить в корзину"><svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
 				html +='<path d="m490.334 106.668h-399.808l-5.943-66.207c-.972-10.827-10.046-19.123-20.916-19.123h-42.667c-11.598 0-21 9.402-21 21s9.402 21 21 21h23.468c12.825 142.882-20.321-226.415 24.153 269.089 1.714 19.394 12.193 40.439 30.245 54.739-32.547 41.564-2.809 102.839 50.134 102.839 43.942 0 74.935-43.826 59.866-85.334h114.936c-15.05 41.455 15.876 85.334 59.866 85.334 35.106 0 63.667-28.561 63.667-63.667s-28.561-63.667-63.667-63.667h-234.526c-15.952 0-29.853-9.624-35.853-23.646l335.608-19.724c9.162-.538 16.914-6.966 19.141-15.87l42.67-170.67c3.308-13.234-6.71-26.093-20.374-26.093zm-341.334 341.337c-11.946 0-21.666-9.72-21.666-21.667s9.72-21.667 21.666-21.667c11.947 0 21.667 9.72 21.667 21.667s-9.72 21.667-21.667 21.667zm234.667 0c-11.947 0-21.667-9.72-21.667-21.667s9.72-21.667 21.667-21.667 21.667 9.72 21.667 21.667-9.72 21.667-21.667 21.667zm47.366-169.726-323.397 19.005-13.34-148.617h369.142z"></path>';
-				html += '</svg>';
+				html += '</svg></span>';
 				html += '</div>';
 				html += '</div>';
 			}
@@ -10832,16 +10832,16 @@ function addHolidayGrid() {
 		for (var card in data) {
 			if (data[card].gallery === "Праздничные коллекции") {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="soap" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="Мыло '+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
 				html += '<span class="card__currency"> грн</span>';
 				html += '<p class="card__description1">' +data[card]['description1']+ '</p>';
 				html += '<p class="card__description2">' +data[card]['description2']+ '</p>';
-				html += '<svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
+				html += '<span title="Добавить в корзину"><svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
 				html +='<path d="m490.334 106.668h-399.808l-5.943-66.207c-.972-10.827-10.046-19.123-20.916-19.123h-42.667c-11.598 0-21 9.402-21 21s9.402 21 21 21h23.468c12.825 142.882-20.321-226.415 24.153 269.089 1.714 19.394 12.193 40.439 30.245 54.739-32.547 41.564-2.809 102.839 50.134 102.839 43.942 0 74.935-43.826 59.866-85.334h114.936c-15.05 41.455 15.876 85.334 59.866 85.334 35.106 0 63.667-28.561 63.667-63.667s-28.561-63.667-63.667-63.667h-234.526c-15.952 0-29.853-9.624-35.853-23.646l335.608-19.724c9.162-.538 16.914-6.966 19.141-15.87l42.67-170.67c3.308-13.234-6.71-26.093-20.374-26.093zm-341.334 341.337c-11.946 0-21.666-9.72-21.666-21.667s9.72-21.667 21.666-21.667c11.947 0 21.667 9.72 21.667 21.667s-9.72 21.667-21.667 21.667zm234.667 0c-11.947 0-21.667-9.72-21.667-21.667s9.72-21.667 21.667-21.667 21.667 9.72 21.667 21.667-9.72 21.667-21.667 21.667zm47.366-169.726-323.397 19.005-13.34-148.617h369.142z"></path>';
-				html += '</svg>';
+				html += '</svg></span>';
 				html += '</div>';
 				html += '</div>';
 			}
@@ -10855,16 +10855,16 @@ function addAllGrid() {
 		var html = '';
 		for (var card in data) {
 				html += '<div class="card__item">';
-				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="soap" class="card__img"></div>';
+				html += '<div class="card__img-wrap"><img src="'+data[card]['img']+ '" alt="Мыло '+data[card]['name']+'" class="card__img"></div>';
 				html += '<div class="card__body">';
 				html += '<h3 class="card__title">' +data[card]['name']+ '</h3>';
 				html += '<span class="card__price-value">' +data[card]['price']+ '</span>';
 				html += '<span class="card__currency"> грн</span>';
 				html += '<p class="card__description1">' +data[card]['description1']+ '</p>';
 				html += '<p class="card__description2">' +data[card]['description2']+ '</p>';
-				html += '<svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
+				html += '<span title="Добавить в корзину"><svg class="item-cart" data-id="'+card+'" data-name="'+data[card]['name']+'" data-price="'+data[card]['price']+'" enable-background="new 0 0 511.343 511.343" viewBox="0 0 511.343 511.343">';
 				html +='<path d="m490.334 106.668h-399.808l-5.943-66.207c-.972-10.827-10.046-19.123-20.916-19.123h-42.667c-11.598 0-21 9.402-21 21s9.402 21 21 21h23.468c12.825 142.882-20.321-226.415 24.153 269.089 1.714 19.394 12.193 40.439 30.245 54.739-32.547 41.564-2.809 102.839 50.134 102.839 43.942 0 74.935-43.826 59.866-85.334h114.936c-15.05 41.455 15.876 85.334 59.866 85.334 35.106 0 63.667-28.561 63.667-63.667s-28.561-63.667-63.667-63.667h-234.526c-15.952 0-29.853-9.624-35.853-23.646l335.608-19.724c9.162-.538 16.914-6.966 19.141-15.87l42.67-170.67c3.308-13.234-6.71-26.093-20.374-26.093zm-341.334 341.337c-11.946 0-21.666-9.72-21.666-21.667s9.72-21.667 21.666-21.667c11.947 0 21.667 9.72 21.667 21.667s-9.72 21.667-21.667 21.667zm234.667 0c-11.947 0-21.667-9.72-21.667-21.667s9.72-21.667 21.667-21.667 21.667 9.72 21.667 21.667-9.72 21.667-21.667 21.667zm47.366-169.726-323.397 19.005-13.34-148.617h369.142z"></path>';
-				html += '</svg>';
+				html += '</svg></span>';
 				html += '</div>';
 				html += '</div>';
 		}	
@@ -11019,6 +11019,7 @@ var cart = {};
     if ($('cart') != null) {
       $('.checkout__form').removeClass('disabledY');
       $('.checkout').css('height', 'auto');
+      $('.cart-content__btn').css('visibility', 'visible');
     } else {
       $('.checkout__form').addClass('disabledY');
     }
@@ -11069,6 +11070,16 @@ function sendCheckout() {
 });
 $('document').ready(function(){
 	'use strict';
+
+
+//Global site tag (gtag.js) - Google Analytics
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-32347327-1');
+
+
+
 
 //Slider******************************************************************
 	$('.slides').owlCarousel({
@@ -11147,8 +11158,8 @@ $('document').ready(function(){
 
 $('.popular__item--2,.popular__item--3, .offer__item--5, .offer__item--2, .about-card__item--3, .about__item--2, .data-mail').onAppearanceAddClass('animated fadeInRight fast');
 
-$('.offer__item--4, .offer__item--6, .offer__item--7, .popular__item--5, .popular__item--4, .reviews__title-wrap, .popular__title-wrap, .footer__top, .offer__item--1,.form-feedback__main').onAppearanceAddClass('fadeInUp animated slow');
-$('.descriptionProduct__text').onAppearanceAddClass('fadeInRight animated slow');
+$('.offer__item--4, .offer__item--6, .offer__item--7, .popular__item--5, .popular__item--4, .reviews__title-wrap, .popular__title-wrap, .footer__top, .offer__item--1,.form-feedback__main').onAppearanceAddClass('fadeInUp animated fast');
+$('.descriptionProduct__text').onAppearanceAddClass('fadeInRight animated fast');
 $('.offer__item--3, .about-card__item--1, .popular__item--1, .about__item--1, .data-tel').onAppearanceAddClass('animated fadeInLeft fast');
 
 

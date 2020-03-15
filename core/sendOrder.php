@@ -29,7 +29,7 @@ $message .= 'Итого: '.$sum.'грн <br>';
 // print_r($message);
 
 $subject = 'Заказ с магазина "Handmade Soap Ideas"';
-$to = 'y.vacheslav@gmail.com'.','; // Здесь нужно написать e-mail, куда будут приходить письма
+$to = 'kristinakrajsvitnaa@gmail.com'.','; // Здесь нужно написать e-mail, куда будут приходить письма
 $to .= $_POST['email']; // Здесь нужно написать e-mail, куда будут приходить копия письма
 $spectext = '<!DOCTYPE HTML><html><head><title>Заказ</title></head><body>';
 $headers  = 'MIME-Version: 1.0' . "\r\n";
